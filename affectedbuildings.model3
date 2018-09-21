@@ -1,0 +1,563 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option name="children" type="Map">
+    <Option name="native:buffer_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="native:buffer" type="QString"/>
+      <Option name="component_description" value="Buffer" type="QString"/>
+      <Option name="component_pos_x" value="412" type="double"/>
+      <Option name="component_pos_y" value="321" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="native:buffer_1" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Travel distance buffer" type="Map">
+          <Option name="child_id" value="native:buffer_1" type="QString"/>
+          <Option name="component_description" value="Travel distance buffer" type="QString"/>
+          <Option name="component_pos_x" value="652" type="double"/>
+          <Option name="component_pos_y" value="381" type="double"/>
+          <Option name="default_value" value="" type="Unknown"/>
+          <Option name="mandatory" value="false" type="bool"/>
+          <Option name="name" value="Travel distance buffer" type="QString"/>
+          <Option name="output_name" value="OUTPUT" type="QString"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="DISSOLVE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="false" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="DISTANCE" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="traveldistancebuffer" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="END_CAP_STYLE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:serviceareafrompoint_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT_LINES" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="JOIN_STYLE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="MITER_LIMIT" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="2" type="double"/>
+          </Option>
+        </Option>
+        <Option name="SEGMENTS" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="5" type="double"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="native:extractbylocation_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="native:extractbylocation" type="QString"/>
+      <Option name="component_description" value="Extract by location" type="QString"/>
+      <Option name="component_pos_x" value="412" type="double"/>
+      <Option name="component_pos_y" value="426" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="native:extractbylocation_1" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="landparcellayer" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="INTERSECT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="native:buffer_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="PREDICATE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="0" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="native:extractbylocation_2" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="native:extractbylocation" type="QString"/>
+      <Option name="component_description" value="Extract by location" type="QString"/>
+      <Option name="component_pos_x" value="412" type="double"/>
+      <Option name="component_pos_y" value="522" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="native:extractbylocation_2" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Affected buildings" type="Map">
+          <Option name="child_id" value="native:extractbylocation_2" type="QString"/>
+          <Option name="component_description" value="Affected buildings" type="QString"/>
+          <Option name="component_pos_x" value="649" type="double"/>
+          <Option name="component_pos_y" value="534.5" type="double"/>
+          <Option name="default_value" value="" type="Unknown"/>
+          <Option name="mandatory" value="false" type="bool"/>
+          <Option name="name" value="Affected buildings" type="QString"/>
+          <Option name="output_name" value="OUTPUT" type="QString"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="buildingsfootprintslayer" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="INTERSECT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="native:extractbylocation_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="PREDICATE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="0" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:serviceareafrompoint_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:serviceareafrompoint" type="QString"/>
+      <Option name="component_description" value="Service area (from point)" type="QString"/>
+      <Option name="component_pos_x" value="409" type="double"/>
+      <Option name="component_pos_y" value="207" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="qgis:serviceareafrompoint_1" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Affected road network" type="Map">
+          <Option name="child_id" value="qgis:serviceareafrompoint_1" type="QString"/>
+          <Option name="component_description" value="Affected road network" type="QString"/>
+          <Option name="component_pos_x" value="642" type="double"/>
+          <Option name="component_pos_y" value="232" type="double"/>
+          <Option name="default_value" value="" type="Unknown"/>
+          <Option name="mandatory" value="false" type="bool"/>
+          <Option name="name" value="Affected road network" type="QString"/>
+          <Option name="output_name" value="OUTPUT_LINES" type="QString"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="DEFAULT_DIRECTION" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="2" type="int"/>
+          </Option>
+        </Option>
+        <Option name="DEFAULT_SPEED" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="5" type="double"/>
+          </Option>
+        </Option>
+        <Option name="DIRECTION_FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="" type="Unknown"/>
+          </Option>
+        </Option>
+        <Option name="INCLUDE_BOUNDS" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="false" type="bool"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="roadnetworklayer" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="SPEED_FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="" type="Unknown"/>
+          </Option>
+        </Option>
+        <Option name="START_POINT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="eventlocation" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="STRATEGY" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="TOLERANCE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="0" type="double"/>
+          </Option>
+        </Option>
+        <Option name="TRAVEL_COST" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="traveldistance" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="VALUE_BACKWARD" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="traveldistance" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="VALUE_BOTH" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="traveldistance" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="VALUE_FORWARD" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="traveldistance" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:setstyleforvectorlayer_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:setstyleforvectorlayer" type="QString"/>
+      <Option name="component_description" value="Set style for vector layer" type="QString"/>
+      <Option name="component_pos_x" value="640" type="double"/>
+      <Option name="component_pos_y" value="151" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="qgis:setstyleforvectorlayer_1" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="script:pickpoint_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="STYLE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="C:\Training\AffectedBuildings_event_location.qml" type="QString"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:setstyleforvectorlayer_2" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:setstyleforvectorlayer" type="QString"/>
+      <Option name="component_description" value="Set style for vector layer" type="QString"/>
+      <Option name="component_pos_x" value="643" type="double"/>
+      <Option name="component_pos_y" value="290" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="qgis:setstyleforvectorlayer_2" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:serviceareafrompoint_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT_LINES" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="STYLE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="C:/Training/AffectedBuildings_affected_road_network.qml" type="QString"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:setstyleforvectorlayer_3" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:setstyleforvectorlayer" type="QString"/>
+      <Option name="component_description" value="Set style for vector layer" type="QString"/>
+      <Option name="component_pos_x" value="651" type="double"/>
+      <Option name="component_pos_y" value="445" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="qgis:setstyleforvectorlayer_3" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="native:buffer_1" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="STYLE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="C:/Training/AffectedBuildings_travel_distance_buffer.qml" type="QString"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:setstyleforvectorlayer_4" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:setstyleforvectorlayer" type="QString"/>
+      <Option name="component_description" value="Set style for vector layer" type="QString"/>
+      <Option name="component_pos_x" value="648" type="double"/>
+      <Option name="component_pos_y" value="594" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="qgis:setstyleforvectorlayer_4" type="QString"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="native:extractbylocation_2" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="STYLE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="C:/Training/AffectedBuildings_affected_buildings.qml" type="QString"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="script:pickpoint_1" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="script:pickpoint" type="QString"/>
+      <Option name="component_description" value="Pick point on map" type="QString"/>
+      <Option name="component_pos_x" value="403" type="double"/>
+      <Option name="component_pos_y" value="59" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="script:pickpoint_1" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="Event location" type="Map">
+          <Option name="child_id" value="script:pickpoint_1" type="QString"/>
+          <Option name="component_description" value="Event location" type="QString"/>
+          <Option name="component_pos_x" value="642" type="double"/>
+          <Option name="component_pos_y" value="89" type="double"/>
+          <Option name="default_value" value="" type="Unknown"/>
+          <Option name="mandatory" value="false" type="bool"/>
+          <Option name="name" value="Event location" type="QString"/>
+          <Option name="output_name" value="OUTPUT" type="QString"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="START_POINT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" value="eventlocation" type="QString"/>
+            <Option name="source" value="0" type="int"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help" type="Map">
+    <Option name="ALG_CREATOR" value="Simon Nitz" type="QString"/>
+    <Option name="ALG_DESC" value="Displays buildings affected by some event within a distance from the event location.  &#xa;&#xa;The affected buildings are determined by &#xa;•&#x9;travelling a distance along the road network from the event location, &#xa;•&#x9;buffering the travel distance to intersect land parcels, &#xa;•&#x9;extracting building footprints that that intersect the land parcels.&#xa;" type="QString"/>
+    <Option name="ALG_HELP_CREATOR" value="Simon Nitz" type="QString"/>
+    <Option name="ALG_VERSION" value="1.0" type="QString"/>
+    <Option name="buildingsfootprintslayer" value="" type="QString"/>
+    <Option name="native:buffer_1:Travel distance buffer" value="" type="QString"/>
+    <Option name="native:extractbylocation_2:Affected buildings" value="" type="QString"/>
+    <Option name="qgis:serviceareafrompoint_1:Affected road network" value="" type="QString"/>
+    <Option name="script:pickpoint_1:Event location" value="" type="QString"/>
+    <Option name="traveldistance" value="" type="QString"/>
+    <Option name="traveldistancebuffer" value="" type="QString"/>
+  </Option>
+  <Option name="model_group" value="Training" type="QString"/>
+  <Option name="model_name" value="Affected Buidlings" type="QString"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="buildingsfootprintslayer" type="Map">
+      <Option name="data_types" type="List">
+        <Option value="2" type="int"/>
+      </Option>
+      <Option name="default" value="" type="Unknown"/>
+      <Option name="description" value="Buildings footprints layer" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="buildingsfootprintslayer" type="QString"/>
+      <Option name="parameter_type" value="vector" type="QString"/>
+    </Option>
+    <Option name="eventlocation" type="Map">
+      <Option name="default" value="" type="QString"/>
+      <Option name="description" value="Event location" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="eventlocation" type="QString"/>
+      <Option name="parameter_type" value="point" type="QString"/>
+    </Option>
+    <Option name="landparcellayer" type="Map">
+      <Option name="data_types" type="List">
+        <Option value="2" type="int"/>
+      </Option>
+      <Option name="default" value="" type="Unknown"/>
+      <Option name="description" value="Land parcel layer" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="landparcellayer" type="QString"/>
+      <Option name="parameter_type" value="vector" type="QString"/>
+    </Option>
+    <Option name="native:buffer_1:Travel distance buffer" type="Map">
+      <Option name="create_by_default" value="true" type="bool"/>
+      <Option name="data_type" value="2" type="int"/>
+      <Option name="default" value="" type="Unknown"/>
+      <Option name="description" value="Travel distance buffer" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="native:buffer_1:Travel distance buffer" type="QString"/>
+      <Option name="parameter_type" value="sink" type="QString"/>
+      <Option name="supports_non_file_outputs" value="true" type="bool"/>
+    </Option>
+    <Option name="native:extractbylocation_2:Affected buildings" type="Map">
+      <Option name="create_by_default" value="true" type="bool"/>
+      <Option name="data_type" value="-1" type="int"/>
+      <Option name="default" value="" type="Unknown"/>
+      <Option name="description" value="Affected buildings" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="native:extractbylocation_2:Affected buildings" type="QString"/>
+      <Option name="parameter_type" value="sink" type="QString"/>
+      <Option name="supports_non_file_outputs" value="true" type="bool"/>
+    </Option>
+    <Option name="qgis:serviceareafrompoint_1:Affected road network" type="Map">
+      <Option name="create_by_default" value="true" type="bool"/>
+      <Option name="data_type" value="1" type="int"/>
+      <Option name="default" value="" type="Unknown"/>
+      <Option name="description" value="Affected road network" type="QString"/>
+      <Option name="flags" value="8" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="qgis:serviceareafrompoint_1:Affected road network" type="QString"/>
+      <Option name="parameter_type" value="sink" type="QString"/>
+      <Option name="supports_non_file_outputs" value="true" type="bool"/>
+    </Option>
+    <Option name="roadnetworklayer" type="Map">
+      <Option name="data_types" type="List">
+        <Option value="1" type="int"/>
+      </Option>
+      <Option name="default" value="" type="Unknown"/>
+      <Option name="description" value="Road network Layer" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="roadnetworklayer" type="QString"/>
+      <Option name="parameter_type" value="vector" type="QString"/>
+    </Option>
+    <Option name="script:pickpoint_1:Event location" type="Map">
+      <Option name="create_by_default" value="true" type="bool"/>
+      <Option name="data_type" value="-1" type="int"/>
+      <Option name="default" value="" type="Unknown"/>
+      <Option name="description" value="Event location" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="script:pickpoint_1:Event location" type="QString"/>
+      <Option name="parameter_type" value="sink" type="QString"/>
+      <Option name="supports_non_file_outputs" value="true" type="bool"/>
+    </Option>
+    <Option name="traveldistance" type="Map">
+      <Option name="data_type" value="1" type="int"/>
+      <Option name="default" value="200" type="QString"/>
+      <Option name="description" value="Travel distance" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="max" value="10000" type="double"/>
+      <Option name="metadata"/>
+      <Option name="min" value="1" type="double"/>
+      <Option name="name" value="traveldistance" type="QString"/>
+      <Option name="parameter_type" value="number" type="QString"/>
+    </Option>
+    <Option name="traveldistancebuffer" type="Map">
+      <Option name="data_type" value="1" type="int"/>
+      <Option name="default" value="20" type="QString"/>
+      <Option name="description" value="Travel distance buffer" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="max" value="1000" type="double"/>
+      <Option name="metadata"/>
+      <Option name="min" value="1" type="double"/>
+      <Option name="name" value="traveldistancebuffer" type="QString"/>
+      <Option name="parameter_type" value="number" type="QString"/>
+    </Option>
+  </Option>
+  <Option name="parameters" type="Map">
+    <Option name="buildingsfootprintslayer" type="Map">
+      <Option name="component_description" value="buildingsfootprintslayer" type="QString"/>
+      <Option name="component_pos_x" value="119" type="double"/>
+      <Option name="component_pos_y" value="487" type="double"/>
+      <Option name="name" value="buildingsfootprintslayer" type="QString"/>
+    </Option>
+    <Option name="eventlocation" type="Map">
+      <Option name="component_description" value="eventlocation" type="QString"/>
+      <Option name="component_pos_x" value="116" type="double"/>
+      <Option name="component_pos_y" value="27" type="double"/>
+      <Option name="name" value="eventlocation" type="QString"/>
+    </Option>
+    <Option name="landparcellayer" type="Map">
+      <Option name="component_description" value="landparcellayer" type="QString"/>
+      <Option name="component_pos_x" value="118" type="double"/>
+      <Option name="component_pos_y" value="394" type="double"/>
+      <Option name="name" value="landparcellayer" type="QString"/>
+    </Option>
+    <Option name="roadnetworklayer" type="Map">
+      <Option name="component_description" value="roadnetworklayer" type="QString"/>
+      <Option name="component_pos_x" value="118" type="double"/>
+      <Option name="component_pos_y" value="142" type="double"/>
+      <Option name="name" value="roadnetworklayer" type="QString"/>
+    </Option>
+    <Option name="traveldistance" type="Map">
+      <Option name="component_description" value="traveldistance" type="QString"/>
+      <Option name="component_pos_x" value="116" type="double"/>
+      <Option name="component_pos_y" value="188" type="double"/>
+      <Option name="name" value="traveldistance" type="QString"/>
+    </Option>
+    <Option name="traveldistancebuffer" type="Map">
+      <Option name="component_description" value="traveldistancebuffer" type="QString"/>
+      <Option name="component_pos_x" value="118" type="double"/>
+      <Option name="component_pos_y" value="285" type="double"/>
+      <Option name="name" value="traveldistancebuffer" type="QString"/>
+    </Option>
+  </Option>
+</Option>
