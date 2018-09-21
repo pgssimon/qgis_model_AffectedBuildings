@@ -5,7 +5,7 @@ For QGIS 3+
 Requires: https://github.com/pgssimon/qgis_pick_a_point
 
 
-## Affected Buidlings
+## Affected Buildings
 
 Displays buildings affected by some event within a distance from the event location. 
 The affected buildings are determined by 
