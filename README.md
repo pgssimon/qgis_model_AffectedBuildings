@@ -3,7 +3,11 @@ QGIS model to determine affected buildings on land parcels that are a travel dis
 
 For QGIS 3+
 
+Requires: https://github.com/pgssimon/qgis_pick_a_point
+
+
 **Affected Buidlings**
+
 Displays buildings affected by some event within a distance from the event location. 
 The affected buildings are determined by 
 * travelling a distance along the road network from the event location, 
@@ -16,4 +20,3 @@ The affected buildings are determined by
 
 
 
-Requires https://github.com/pgssimon/qgis_pick_a_point
